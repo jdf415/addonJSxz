@@ -1,4 +1,16 @@
-h1{
+/*h1{
 	color:blue;
 	font-size: 43px;
+}*/
+
+body{
+	background-color: navy;
+}
+
+div{
+	height: 75px;
+	margin: 20px;
+	padding: 30px;
+	background-color: pink;
+	color:white;
 }
