@@ -35,23 +35,54 @@ console.log(newNameArr);
 console.log(newNameArr.sort());
 
 // numericaly order an array
-newNumArr = [67, 986, 726, 87, 654];
+let newNumArr = [67, 986, 726, 87, 654];
+console.log(newNumArr);	
 
-console.log(newNumArr.sort());
+// console.log(newNumArr.sort());
 
-console.log(newNumArr.sort(
-	// used function as an argument
-	// runs function(a, b) on every two numbers in the array
-	// and returns the greater of the two
-	function(a, b){
-		return a - b;
-	}))
+// console.log(newNumArr.sort(
+// 	// used function as an argument
+// 	// runs function(a, b) on every two numbers in the array
+// 	// and returns the greater of the two
+// 	function(a, b){
+// 		return a - b;
+// 	}))
+
+// 	// ascending order function
+//  var ascendingOrder = function(a, b){
+// 		return a - b;
+// 	}
+
+// // decending order
+
+// var decendingOrder = function(a, b){
+// 				return b - a;
+// }
+
+// console.log(newNumArr.sort(decendingOrder))
+// console.log(newNumArr.sort(ascendingOrder))
 
 
-// decending order
 
-var decendingOrder = function(a, b){
-				return b - a;
+	// variable created that contains a function with an argument
+		// function takes randomArr as an argument
+			// randomArr is a place holder
+var copyArr = function(randomArr) {
+	//create an new empty array
+	let newRandomArr = [];
+		// loops through the argument array - randomArr
+	for(var i = 0; i <  randomArr.length; i++){
+		// pushes every item through the created new empty array -newRandomArr- to compile a new array
+		newRandomArr.push(randomArr[i]);
+	}
+		// returns the new compiled array from the copyArr with reverse method
+	return newRandomArr.reverse();
 }
 
-console.log(newNumArr.sort(decendingOrder))
+let backwordsArr = copyArr(newNumArr);
+
+console.log(backwordsArr);
+
+let newWordArr = ["hello", "there", "we", "are", "here"];
+
+console.log(copyArr(newWordArr));
